@@ -1,17 +1,17 @@
 import { useState } from "react";
 
 const Toggle = ({ label = "NSFW" }) => {
-  const [enabled, setEnabled] = useState(false);
+  const [enabled, setEnabled] = useState(true);
 
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex items-center gap-2 h-10">
       <span className="text-sm font-medium text-gray-700">{label}</span>
       <button
         onClick={() => setEnabled(!enabled)}
         className={`
           relative inline-flex h-6 w-11 items-center rounded-full
           transition-colors duration-200 ease-in-out focus:outline-none
-          ${enabled ? "bg-indigo-600" : "bg-gray-200"}
+          ${enabled ? "bg-indigo-700" : "bg-gray-200"}
         `}
       >
         <span className="sr-only">Toggle {label}</span>
