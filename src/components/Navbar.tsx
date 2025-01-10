@@ -22,7 +22,7 @@ const Navbar = () => {
         <div className="flex w-48 items-center justify-end gap-6 ">
           <button className="rounded-full bg-indigo-700 p-3 hover:bg-[#4752C4] transition-colors">
             <svg
-              className="h-4 w-4 text-white"
+              className="h-5 w-5 text-white"
               viewBox="0 0 24 24"
               fill="currentColor"
             >

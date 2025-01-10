@@ -4,8 +4,8 @@ const Toggle = ({ label = "NSFW" }) => {
   const [enabled, setEnabled] = useState(true);
 
   return (
-    <div className="flex items-center gap-2 h-10">
-      <span className="text-sm font-medium text-gray-700">{label}</span>
+    <div className="flex items-center gap-2 h-12">
+      <span className="text-md font-medium text-gray-700">{label}</span>
       <button
         onClick={() => setEnabled(!enabled)}
         className={`
