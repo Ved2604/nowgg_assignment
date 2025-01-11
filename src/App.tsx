@@ -6,9 +6,11 @@ import "./App.css";
 function App() {
   return (
     <>
-      <Navbar />
-      <ExploreGrid />
-      <Footer />
+      <div className="bg-gray-100">
+        <Navbar />
+        <ExploreGrid />
+        <Footer />
+      </div>
     </>
   );
 }

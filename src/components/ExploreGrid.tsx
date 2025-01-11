@@ -8,7 +8,7 @@ const ExploreGrid = () => {
   const [page, setPage] = useState(1);
   const [hasMore, setHasMore] = useState(true);
 
-  const url = `https://randomuser.me/api/?page=${page}&results=36`;
+  const url = `https://randomuser.me/api/?page=${page}&results=20`;
 
   const fetchUsers = async () => {
     try {
@@ -37,7 +37,7 @@ const ExploreGrid = () => {
         next={fetchUsers}
         hasMore={hasMore}
         loader={<h4>Loading...</h4>}
-        className="grid grid-cols-4 gap-4 pl-32 mt-20"
+        className="grid grid-cols-4 gap-1 pl-32 mt-20 pr-32"
       >
         {profiles.map((profile, index) => (
           <ProfileCard key={index} profile={profile} />

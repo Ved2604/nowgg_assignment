@@ -4,7 +4,7 @@ import { Search } from "lucide-react";
 
 const Navbar = () => {
   return (
-    <nav className="w-full bg-white px-4 pt-4 mt-2">
+    <nav className="w-full bg-gray-100 px-4 pt-4 mt-2">
       <div className="mx-auto flex h-14 max-w-7xl items-center justify-between pr-40 pl-28">
         {/* Left section - empty for now */}
 
