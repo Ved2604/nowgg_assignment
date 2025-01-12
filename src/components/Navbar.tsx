@@ -2,7 +2,11 @@ import Toggle from "./Toggle";
 import { Input } from "./ui/input";
 import { Search } from "lucide-react";
 
-const Navbar = () => {
+const Navbar = ({
+  setSearchTerm,
+}: {
+  setSearchTerm: (term: string) => void;
+}) => {
   return (
     <nav className="w-full bg-gray-100 px-4 pt-4 mt-2">
       <div className="mx-auto flex h-14 max-w-7xl items-center justify-between pr-40 pl-28">
@@ -14,6 +18,7 @@ const Navbar = () => {
             type="search"
             placeholder="Search"
             className=" border-0  h-10 focus:ring-0 w-full  text-xl"
+            onChange={(e) => setSearchTerm(e.target.value)}
           />
           <Search className="left-4 h-6 w-6 text-gray-400 z-10" />
         </div>
