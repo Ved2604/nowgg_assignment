@@ -8,26 +8,24 @@ const Navbar = ({
   setSearchTerm: (term: string) => void;
 }) => {
   return (
-    <nav className="w-full bg-gray-100 px-4 pt-4 mt-2">
-      <div className="mx-auto flex h-14 max-w-7xl items-center justify-between pr-40 pl-28">
-        {/* Left section - empty for now */}
-
-        {/* Middle section - Search */}
-        <div className="relative flex w-full max-w-md items-center bg-gray-50 shadow-md focus-within:ring-0 rounded-full pr-4 h-10">
+    <nav className="w-full bg-gray-100 p-4 sm:pt-4 mt-2">
+      <div className="mx-auto flex flex-col sm:flex-row gap-4 sm:gap-6 h-auto sm:h-14 max-w-7xl items-center justify-between px-2 sm:px-6 lg:px-8">
+        {/* Search Container */}
+        <div className="relative flex w-[90%] sm:w-[60%] md:w-[50%] lg:w-[40%] items-center bg-gray-50 shadow-md focus-within:ring-0 rounded-full h-10">
           <Input
             type="search"
             placeholder="Search"
-            className=" border-0  h-10 focus:ring-0 w-full  text-xl"
+            className="border-0 h-10 focus:ring-0 w-full pl-4 pr-10 text-base sm:text-lg rounded-full"
             onChange={(e) => setSearchTerm(e.target.value)}
           />
-          <Search className="left-4 h-6 w-6 text-gray-400 z-10" />
+          <Search className="absolute right-4 h-5 w-5 sm:h-6 sm:w-6 text-gray-400" />
         </div>
 
-        {/* Right section - Discord & Toggle */}
-        <div className="flex w-48 items-center justify-end gap-6 ">
-          <button className="rounded-full bg-indigo-700 p-3 hover:bg-[#4752C4] transition-colors">
+        {/* Controls Container */}
+        <div className="flex items-center justify-end gap-4 sm:gap-6 w-full sm:w-auto">
+          <button className="rounded-full bg-indigo-700 p-2 sm:p-3 hover:bg-[#4752C4] transition-colors">
             <svg
-              className="h-5 w-5 text-white"
+              className="h-4 w-4 sm:h-5 sm:w-5 text-white"
               viewBox="0 0 24 24"
               fill="currentColor"
             >
