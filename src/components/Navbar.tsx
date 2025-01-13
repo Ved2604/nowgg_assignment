@@ -11,7 +11,7 @@ const Navbar = ({
     <nav className="w-full bg-gray-100 p-4 sm:pt-4 mt-2">
       <div className="mx-auto flex flex-col sm:flex-row gap-4 sm:gap-6 h-auto sm:h-14 max-w-7xl items-center justify-between px-2 sm:px-6 lg:px-8">
         {/* Search Container */}
-        <div className="relative flex w-[90%] sm:w-[60%] md:w-[50%] lg:w-[40%] items-center bg-gray-50 shadow-md focus-within:ring-0 rounded-full h-10">
+        <div className="relative flex w-[90%] sm:w-[60%] md:w-[50%] lg:w-[40%] items-center bg-gray-50 shadow-md focus-within:ring-0 rounded-full h-10 ml-12">
           <Input
             type="search"
             placeholder="Search"
