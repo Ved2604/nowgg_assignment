@@ -4,6 +4,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import Skeleton from "react-loading-skeleton"; // Import the skeleton loader
 import "react-loading-skeleton/dist/skeleton.css"; // Import skeleton styles
 import { UserApiResponse, Profile } from "@/types/profile.types";
+import NoProfilesFound from "./NoProfilesFound"; // Import the new fallback component
 
 const ExploreGrid = ({ searchTerm }: { searchTerm: string }) => {
   const [profiles, setProfiles] = useState<Profile[]>([]);
@@ -78,9 +79,13 @@ const ExploreGrid = ({ searchTerm }: { searchTerm: string }) => {
         }
         className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 px-4 sm:px-8 lg:px-16 xl:px-32 mt-8"
       >
-        {filteredProfiles.map((profile, index) => (
-          <ProfileCard key={index} profile={profile} />
-        ))}
+        {filteredProfiles.length === 0 ? (
+          <NoProfilesFound /> // Display fallback UI if no profiles match
+        ) : (
+          filteredProfiles.map((profile, index) => (
+            <ProfileCard key={index} profile={profile} />
+          ))
+        )}
       </InfiniteScroll>
     </>
   );
